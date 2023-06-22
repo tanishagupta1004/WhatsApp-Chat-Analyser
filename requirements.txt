@@ -1,2 +1,4 @@
 URLEXTRACT
 streamlit
+matplotlib
+wordcloud

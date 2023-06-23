@@ -2,3 +2,4 @@ URLEXTRACT
 streamlit
 matplotlib
 wordcloud
+emoji

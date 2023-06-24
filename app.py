@@ -1,6 +1,7 @@
 import streamlit as st
 import preprocessor,helper
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 st.sidebar.title("WhatsApp Chat Analyzer")
 
@@ -76,8 +77,11 @@ if uploaded_file is not None:
             plt.xticks(rotation='vertical')
             st.pyplot(fig)
 
-
-
+        st.title("Weekly Activity Map")
+        user_heatmap=helper.activity_heatmap(selected_user,df)
+        fig,ax=plt.subplots()
+        ax=sns.heatmap(user_heatmap)
+        st.pyplot(fig)
 
         # Finding the busiest user in the group(Group Level)
         if selected_user=='Overall':
